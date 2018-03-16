@@ -1,0 +1,37 @@
+.color{
+  color: #765E58;
+  padding: 4px 16px;
+}
+
+.button {
+  background-color: #765E58;
+  color: white;
+  font-size:18px;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  color: white;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+thead{
+  background-color: #765E58;
+  color: white;
+  text-align: center;
+}
+
+td {
+  color: black;
+  font-weight: bold;
+  padding: 7px;
+}
+
+tr:hover {
+  background-color:#EEE8E7;
+}

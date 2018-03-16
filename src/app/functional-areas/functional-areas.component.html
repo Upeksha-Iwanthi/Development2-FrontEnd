@@ -1,0 +1,25 @@
+<div style="padding-top: 50px">
+  <div>
+    <label class="color">JIRA Issue Id</label>
+    <input style="color:#765E58" type="text" [(ngModel)]='issue_Id.issueId' maxlength="25">
+    <input class="button" type="button" (click)="doSearch()" name="Search" value="search"/>
+    <table>
+      <thead>
+      <tr>
+        <td>Functional Area</td>
+        <td>Class Path</td>
+        <td>Module</td>
+        <td>Percentage</td>
+        <td>Issue List</td>
+      </tr>
+      </thead>
+      <tr *ngFor="let obj of issueSearchResult.issueSearchResultList">
+        <td>{{obj.functionalAreas}}</td>
+        <td>{{obj.classPath}}</td>
+        <td>{{obj.module}}</td>
+        <td>{{obj.percentage}}</td>
+        <td>{{obj.issueList}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

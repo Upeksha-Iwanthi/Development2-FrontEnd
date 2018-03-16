@@ -1,0 +1,32 @@
+<div style="padding-top: 15px">
+  <div class="container">
+    <h2 class="color"> Configured Branches</h2>
+    <div>
+      <h2 class="color">Add New Branch</h2>
+      <input style="color:#765E58" type="text" id="branch" [(ngModel)]='branchData.svnURL' size="100" (keyup)="onchange()">
+      <input style="color:#765E58" type="text" id="type" [(ngModel)]='branchData.type' size="10" (keyup)="onchange()">
+      <button type="button" (click)="saveBranch()" class="button">Add</button>
+      <div *ngIf="response.message.length > 0">
+        <h2 style="color:red">{{response.message}}</h2>
+      </div>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <td style="color: white">Latest Revision</td>
+        <td style="color: white">Branch</td>
+        <td style="color: white">Type</td>
+      </tr>
+      </thead>
+      <tr *ngFor='let obj of branchList'>
+        <td>{{obj.revision}}</td>
+        <td>{{obj.svnURL}}</td>
+        <td>{{obj.type}}</td>
+      </tr>
+    </table>
+    <hr/>
+
+  </div>
+</div>
+
